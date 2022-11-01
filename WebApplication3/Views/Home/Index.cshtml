@@ -1,0 +1,20 @@
+﻿@model HomeVM
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+    
+
+    @foreach (Group group in Model.Groups)
+    {
+        <p>
+            <a asp-controller="home" asp-action="detail" asp-route-id="@group.Id">@group.Name</a>
+        </p>
+    }
+</body>
+</html>
